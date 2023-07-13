@@ -1,0 +1,45 @@
+// BOOTSTRAP - If you want in the same .CSS file
+//
+//@import "bootstrap/bootstrap.3.3.6/bootstrap"; // version 3.3.6
+//
+//@import "bootstrap/bootstrap.4.6/bootstrap"; // version 4.0.0
+//@import "bootstrap/bootstrap.5.0.0/bootstrap"; // version 5.0.0
+//
+// try this features. compile this two versions of bootstrap
+
+// COMMON IMPORTS
+@import "config/fonts";
+@import "config/variables";
+@import "config/mixins";
+
+// BASE
+@import "base/base";
+@import "base/header";
+
+// PARTIALS
+@import "partials/type";
+@import "partials/buttons";
+@import "partials/forms";
+@import "partials/sections";
+@import "partials/tables";
+@import "partials/cards";
+@import "partials/home";
+@import "partials/ui";
+
+// PLUGINS - If exists
+
+// FOOTER
+@import "base/footer";
+
+// RESPONSIVE
+@import "base/responsive";
+
+
+
+
+
+
+
+
+
+

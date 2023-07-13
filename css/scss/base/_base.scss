@@ -1,0 +1,126 @@
+html {
+    //font-size: 16px;
+    //Para usar fontes em rem
+}
+
+body {
+    font-family: $font-stack;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: "liga" on;
+    color: $gray;
+    padding-top: 0;
+    @include font-size(16px);
+}
+
+%off {
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+}
+.off {
+  margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+}
+a {
+  color: $accent--dark;
+  &:hover {
+    color: $accent--light;
+  }
+}
+
+
+
+.social-media-links {
+    list-style: none;
+    padding-left: 0;
+    margin-left: -2px;
+    margin-right: -2px;
+    li {
+        display: inline-block;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    li a
+        {
+            display: inline-block;
+            color: #9BA1AD;
+            background: transparent;
+            height: 42px;
+            width: 42px;
+            text-align: center;
+            line-height: 42px;
+
+            border: 1px solid rgba(0,0,0, 0.2);
+            @include font-size(14px);
+            @include border-radius(3px);
+            @include transition(all .3s ease-in);
+            &:hover {
+                background-color: $secondary-color;
+                color: #fff;
+                border: 1px solid $secondary-color;
+            }
+        }
+}
+
+.social-media-links.m-right li {
+    margin-right: 4px;
+}
+
+.social-media-links.m-left li {
+    margin-left: 4px;
+}
+
+.rounded-xl {
+  border-radius: calculateRem(32px);
+}
+
+.page-bagckground {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 720px;
+  display: block;
+}
+
+/*
+ * Style tweaks
+ * --------------------------------------------------
+ */
+//html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
+
+@media screen and (max-width: 767px) {
+ 
+}
+
+@media screen and (min-width: 1399px) {
+  .container {
+    max-width: 1299px;
+  }
+}
+@media screen and (min-width: 1599px) {
+  .container {
+    max-width: 1399px;
+  }
+}

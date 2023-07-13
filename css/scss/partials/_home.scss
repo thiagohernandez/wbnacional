@@ -1,0 +1,253 @@
+
+.glider-hero--contains {
+    position: relative;
+}
+.hero {
+    .glider-hero {
+        margin-bottom: -60px;
+    }
+    .glider-controls {
+        //position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding-bottom: 32px;
+        height: 60px;
+        //margin-top: -223px;
+        .glider-next, .glider-prev {
+            top: -15px;
+            border: 2px solid $secondary-color;
+            color: $secondary-color;
+            opacity: 1;
+            i, svg {
+                color: $secondary-color;
+            }
+            &.disabled {
+                border: 2px solid #8AA5C6;
+                color: #8AA5C6;
+                opacity: 1;
+                i, svg {
+                    color: #8AA5C6;
+                }
+            }
+        }
+        .glider-dots {
+            justify-content: flex-start;
+            .glider-dot {
+                background-color: $gray-06;
+                opacity: 1;
+                &.active {
+                    background-color: $secondary-color;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.glider-hero--item-wrapper {
+    position: relative;
+    background: linear-gradient(135deg, #0086CF 0%, #281E65 100%);
+    height: 100%;
+}
+.glider-hero--item-inner {
+    //display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    //background-position: center right -320px;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+    &:before {
+        background: linear-gradient(180deg, #13002D 19.67%, rgba(19, 0, 45, 0.25) 128.96%);
+        opacity: 0.6;
+    }
+    &:after {
+        background: rgba(1, 73, 157, 0.25);
+    }
+
+    .container {
+        z-index: 5;
+        position: relative;
+    }
+    
+    .hero-image--wrapper {
+        //background-image: url(img/assets/bg-hero--01.jpg);
+        background-size: cover;
+        background-position: center right;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: translateX(30%);
+        z-index: 1;
+        /*
+        animation-name: anima-slider;
+        animation-duration: 26s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-fill-mode: none;
+        animation-play-state: running;
+        */
+    }
+
+    .glider-hero--content {
+        padding-top: 240px;
+        padding-bottom: 340px;
+        h2 {
+            color: #fff;
+            @include font-size(72px);
+            letter-spacing: -0.02em;
+            font-weight:900;
+        }
+        p {
+            color: #fff;
+            @include font-size(24px);
+            letter-spacing: -0.02em;
+            font-weight:300;
+        }
+    }
+    .glider-hero--action {
+        padding-bottom: 340px;
+        margin: auto;
+        justify-content: center;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    
+}
+
+@keyframes anima-slider {
+    from {
+        transform: translateX(30%) scale(1);
+    }
+    to {
+        transform: translateX(30%) scale(1.1);
+    }  
+}
+.hero--bottom {
+    background-color: rgba(6, 19, 35, 0.5);
+    padding: 32px 0;
+
+    position: relative;
+}
+
+.play-video-component {
+    margin: auto;
+    justify-content: center;
+    display: -ms-flexbox;
+    display: flex;
+    .play-video-component--inner {
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: nowrap;
+        .play-video--icon {
+            width: 98px;
+            height: 98px;
+            position: relative;
+            svg {
+                transition: 300ms transform ease;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                width: 98px;
+                height: 98px;
+                border-radius: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%, -50%, 0) scale(0);
+                background-color: rgba($secondary-color, 0.25);
+                transition: 300ms transform ease;
+            }
+        }
+        .play-video--body {
+            padding-left: 14px;
+            align-self: center;
+            p {
+                margin: 0;
+                color: $gray-06;
+                text-transform: uppercase;
+                font-size: 12px;
+                font-weight: 900;
+                transition: 300ms color ease;
+            }
+            span {
+                margin: 0;
+                color: $secondary-color;
+                text-transform: uppercase;
+                font-size: 12px;
+                font-weight: 900;
+                transition: 300ms color ease;
+            }
+        }
+        &:hover {
+            text-decoration: none;
+            .play-video--icon {
+                svg {
+                    transform: scale(0.75);
+                }
+                &:before {
+                    transform: translate3d(-50%, -50%, 0) scale(1);
+                }
+            }
+            .play-video--body {
+                p { color: $secondary-color; }
+                span { color: $gray-06; }
+            }
+        }
+    }
+}
+
+.hero-coverage {
+    .hero--inner {
+        position: relative;
+        .hero-content {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            background: linear-gradient(180deg, #13002D 19.67%, rgba(19, 0, 45, 0.25) 128.96%);
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .hero--bottom {
+        background-color: rgba(6, 19, 35, 0.95);
+    }
+    .play-video-component  {
+        margin-right: 0;
+        justify-content: flex-end;
+    }
+    .glider-hero--item-inner .glider-hero--content {
+        padding-bottom: 24px;
+        padding-top: 152px;
+    }
+    .glider-hero--item-inner .glider-hero--content h2 {
+        @include font-size(52px);
+    }
+    .glider-hero--item-inner .glider-hero--action {
+        padding-bottom: 132px;
+        justify-content: flex-end;
+    }
+
+    .contact-form--section .contact-form--inner {
+        padding: 0 24px;
+    }
+    .card-intro {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+}

@@ -1,0 +1,93 @@
+/*
+
+nexabolditalic-demo.html
+nexabolditalic-webfont.woff
+nexabolditalic-webfont.woff2
+nexabook-demo.html
+nexabook-webfont.woff
+nexabook-webfont.woff2
+nexalight-demo.html
+nexalight-webfont.woff
+nexalight-webfont.woff2
+nexalightitalic-demo.html
+nexalightitalic-webfont.woff
+nexalightitalic-webfont.woff2
+nexaregular-demo.html
+nexaregular-webfont.woff
+nexaregular-webfont.woff2
+nexaregularitalic-demo.html
+nexaregularitalic-webfont.woff
+nexaregularitalic-webfont.woff2
+nexaxbold-demo.html
+nexaxbold-webfont.woff
+nexaxbold-webfont.woff2
+nexaxbolditalic-demo.html
+nexaxbolditalic-webfont.woff
+*/
+
+$font-path: '../fonts/' !default;
+
+@font-face {
+	font-family:"Nexa";
+	src:    url(#{$font-path}nexaxbolditalic-webfont.woff2) format('woff2'),
+	        url(#{$font-path}nexaxbolditalic-webfont.woff) format('woff');
+    font-style:italic;
+    font-weight:900;
+}
+
+@font-face {
+	font-family:"Nexa";
+	src:    url(#{$font-path}nexaxbold-webfont.woff2) format('woff2'),
+	        url(#{$font-path}nexaxbold-webfont.woff) format('woff');
+    font-style:normal;
+    font-weight:900;
+}
+
+@font-face {
+	font-family:"Nexa";
+	src:    url(#{$font-path}nexabolditalic-webfont.woff2) format('woff2'),
+	        url(#{$font-path}nexabolditalic-webfont.woff) format('woff');
+    font-style:italic;
+    font-weight:700;
+}
+
+@font-face {
+	font-family:"Nexa";
+	src:    url(#{$font-path}nexabold-webfont.woff2) format('woff2'),
+	        url(#{$font-path}nexabold-webfont.woff) format('woff');
+    font-style:normal;
+    font-weight:700;
+}
+
+@font-face {
+	font-family:"Nexa";
+	src:    url(#{$font-path}nexaregularitalic-webfont.woff2) format('woff2'),
+	        url(#{$font-path}nexaregularitalic-webfont.woff) format('woff');
+    font-style:italic;
+    font-weight:400;
+}
+
+@font-face {
+	font-family:"Nexa";
+	src:    url(#{$font-path}nexaregular-webfont.woff2) format('woff2'),
+	        url(#{$font-path}nexaregular-webfont.woff) format('woff');
+    font-style:normal;
+    font-weight:400;
+}
+
+@font-face {
+	font-family:"Nexa";
+	src:    url(#{$font-path}nexalightitalic-webfont.woff2) format('woff2'),
+	        url(#{$font-path}nexalightitalic-webfont.woff) format('woff');
+    font-style:italic;
+    font-weight:300;
+}
+
+@font-face {
+	font-family:"Nexa";
+	src:    url(#{$font-path}nexalight-webfont.woff2) format('woff2'),
+	        url(#{$font-path}nexalight-webfont.woff) format('woff');
+    font-style:normal;
+    font-weight:300;
+}
+

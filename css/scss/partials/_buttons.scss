@@ -1,0 +1,121 @@
+/* BUTTON */
+.btn {
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    padding: calculateRem(16px) calculateRem(32px);
+    text-transform: none;
+    font-family: $font-stack;
+    color: white;
+    @include font-size(16px);
+    font-weight: 900;
+    box-shadow: 0px 12px 16px rgba(51, 34, 107, 0.12);
+}
+
+.btn {
+    @extend .btn;
+    color: $primary-color;
+    &:hover {
+        color: $tertiary-color;
+        background-color: transparent;
+    }
+}
+
+.btn-minimal {
+    @extend .btn;
+    color: $gray;
+    border: 1px solid rgba($gray, 0.3);
+    background-color: transparent;
+    &:hover {
+        color: $gray;
+        border: 1px solid rgba($gray, 1);
+    }
+}
+
+.btn-minimal__white {
+    @extend .btn;
+    color: #fff;
+    border: 1px solid rgba(255,255,255, 0.3);
+    background-color: transparent;
+    &:hover {
+        color: #fff;
+        border: 1px solid rgba(255,255,255, 1);
+    }
+}
+
+.btn-primary {
+    @extend .btn;
+    color: white;
+    background-color: $primary-color;
+    &:hover {
+        color: white;
+        background-color: darken($primary-color, 10%);
+    }
+}
+
+.btn-secondary {
+    @extend .btn;
+    color: white;
+    background-color: $secondary-color;
+    &:hover {
+        color: white;
+        background-color: darken($secondary-color, 10%);
+    }
+}
+
+.btn-tertiary {
+    @extend .btn;
+    color: white;
+    background-color: $tertiary-color;
+    &:hover {
+        color: white;
+        background-color: darken($tertiary-color, 10%);
+    }
+}
+
+.btn-accent--light {
+    @extend .btn;
+    color: white;
+    background-color: $accent--light;
+    &:hover {
+        color: white;
+        background-color: darken($accent--light, 10%);
+    }
+}
+.btn-accent--dark {
+    @extend .btn;
+    color: white;
+    background-color: $accent--dark;
+    &:hover {
+        color: white;
+        background-color: darken($accent--dark, 10%);
+    }
+}
+
+.btn-rounded {
+    @extend .btn;
+    padding: 5px 14px;
+    border-radius: 16px;
+    @include font-size(11px);
+}
+
+.btn-sm {
+    padding: 4px 8px;
+    @include font-size(10px);
+    letter-spacing: 0.05em;
+}
+
+.btn-icon--right {
+    white-space: nowrap;
+    i, svg {
+        margin-left: calculateRem(16px);
+        font-size: 14px;
+    }
+}
+.btn-icon--left {
+    white-space: nowrap;
+    i, svg {
+        margin-right: calculateRem(16px);
+        font-size: 14px;
+    }
+}

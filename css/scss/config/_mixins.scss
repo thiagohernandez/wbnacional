@@ -1,0 +1,100 @@
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+@mixin box-shadow($left, $top, $blur, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow:inset $left $top $blur $color;
+        -moz-box-shadow:inset $left $top $blur $color;
+        box-shadow:inset $left $top $blur $color;
+    } @else {
+        -webkit-box-shadow: $left $top $blur $color;
+        -moz-box-shadow: $left $top $blur $color;
+        box-shadow: $left $top $blur $color;
+        }
+}
+
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+$image-path: '../img/frontend' !default;
+$fallback-extension: 'png' !default;
+$retina-suffix: '@2x';
+@mixin background-image($name, $size:false){
+    background-image: url(#{$image-path}/#{$name}.svg);
+    @if($size){
+        background-size: $size;
+    }
+    .no-svg &{
+        background-image: url(#{$image-path}/#{$name}.#{$fallback-extension});
+
+        //@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+        //  background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.#{$fallback-extension});
+        //}
+    }
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+/* Gradient */
+$deg: '135deg'!default; 
+@mixin gradient-dark-blue($deg) {
+    background: linear-gradient(#{$deg}, #0086CF 0%, #281E65 100%);
+}
+@mixin gradient-medium-blue($deg) {
+    background: linear-gradient(#{$deg}, #00B6EF 0%, #0086CF 100%);
+}
+@mixin gradient-light-blue($deg) {
+    background: linear-gradient(#{$deg}, #C6EBFD 0%, #0086CF 100%);
+}
+
+

@@ -1,0 +1,139 @@
+.padding-mini {
+	padding-top: calculateRem(16px);
+	padding-bottom: calculateRem(16px);
+  }
+  
+  .padding-small {
+	padding-top: calculateRem(24px);
+	padding-bottom: calculateRem(24px);
+  }
+  .padding-small--top {
+	padding-top: calculateRem(24px);
+  }
+  .padding-small--bottom {
+	padding-bottom: calculateRem(24px);
+  }
+  
+  .padding-regular {
+	padding-top: calculateRem(32px);
+	padding-bottom: calculateRem(32px);
+  }
+  .padding-regular--top {
+	padding-top: calculateRem(32px);
+  }
+  .padding-regular--bottom {
+	padding-bottom: calculateRem(32px);
+  }
+  
+  .padding-large {
+	padding-top: calculateRem(64px);
+	padding-bottom: calculateRem(64px);
+  }
+  .padding-large--top {
+	padding-top: calculateRem(64px);
+  }
+  .padding-large--bottom {
+	padding-bottom: calculateRem(64px);
+  }
+  
+  .padding-huge {
+	padding-top: calculateRem(124px);
+	padding-bottom: calculateRem(124px);
+  }
+  .padding-huge--top {
+	padding-top: calculateRem(124px);
+  }
+  .padding-huge--bottom {
+	padding-bottom: calculateRem(124px);
+  }
+  
+  .bg-primary,
+  .section-primary {
+	background-color: $primary-color;
+  }
+  
+  .section-secondary {
+	background-color: $secondary-color;
+  }
+  
+  .section-tertiary {
+	background-color: $primary-color;
+  }
+  
+  .bg-porcelain {
+	background-color: #f8f8f8;
+  }
+  
+  .bg-cover {
+	background-size: cover;
+  }
+  
+  .bg-attachment-fixed {
+	background-attachment: fixed;
+  }
+  
+  .bg-black {
+	background-color: $brand-black;
+  }
+  
+  .bg-gray-00 {
+	background-color: $gray-00;
+  }
+  .bg-gray-01 {
+	background-color: $gray-01;
+  }
+  .bg-gray-02 {
+	background-color: $gray-02;
+  }
+  .bg-gray-03 {
+	background-color: $gray-03;
+  }
+  .bg-gray-04 {
+	background-color: $gray-04;
+  }
+  .bg-gray-05 {
+	background-color: $gray-05;
+  }
+  .bg-gray-06 {
+	background-color: $gray-06;
+  }
+  .bg-gray-07 {
+	background-color: $gray-07;
+  }
+  .bg-gray-08 {
+	background-color: $gray-08;
+  }
+  .bg-gray-09 {
+	background-color: $gray-09;
+  }
+  
+
+.section-primary {
+	background-color: $primary-color;
+}
+
+.section-secondary {
+	background-color: $secondary-color;
+}
+
+.section-tertiary {
+	background-color: $primary-color;
+}
+
+.bg-cover {
+	background-size: cover;
+}
+
+.bg-attachment-fixed {
+	background-attachment: fixed;
+}
+
+.gradient-dark-blue {
+  @include gradient-dark-blue(135deg);
+}
+.gradient-medium-blue {
+  @include gradient-medium-blue(135deg);
+}
+.gradient-light-blue {
+  @include gradient-light-blue(135deg);
+}

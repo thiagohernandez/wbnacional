@@ -1,0 +1,214 @@
+.navbar-brand {
+  max-width: 200px;
+  //height: 98px;
+  //background: url(../../img/frontend/some-image-here.png) left top no-repeat;
+  //background-size: 322px 98px;
+
+  transition: 300ms filter ease;
+}
+
+.navbar-toggle {
+  @include border-radius(2px);
+}
+.navbar-toggler {
+  .navbar-toggler-icon {
+    padding: 4px;
+    text-align: center;
+    position: relative;
+    line-height: 0;
+    &:before {
+      content: "Menu";
+      position: absolute;
+      left: -12px;
+      top: 50%;
+      text-align: right;
+      color: #5a6175;
+      transform: translate3d(-100%, -50%, 0);
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      -moz-transition: 300ms color ease;
+      -webkit-transition: 300ms color ease;
+      transition: 300ms color ease;
+    }
+    .icon--line {
+      height: 2px;
+      border-radius: 2px;
+      background-color: $secondary-color;
+      display: inline-block;
+      margin: 2px auto;
+      width: 70%;
+      text-align: center;
+
+      -moz-transition: 300ms width ease;
+      -webkit-transition: 300ms width ease;
+      transition: 300ms width ease;
+    }
+    .icon--line-2 {
+      width: 100%;
+    }
+  }
+  &:hover {
+    .navbar-toggler-icon:before {
+      color: $secondary-color;
+    }
+    .navbar-toggler-icon .icon--line {
+      width: 100%;
+    }
+  }
+}
+.navbar-dark .navbar-toggler-icon {
+  background-image: none;
+}
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background: $primary-color;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background: $primary-color;
+  border-color: $primary-color;
+  .icon-bar {
+    background: white;
+  }
+}
+
+.navbar {
+  padding-top: 3.5rem;
+  padding-bottom: calculateRem(32px);
+  .nav-link {
+    font-family: $font-heading;
+    font-weight: 700;
+  }
+}
+
+.navbar-brand {
+  //background-image: url('../img/base/logo-wayback.png');
+  background-position: center center;
+  background-size: cover;
+
+  align-self: center;
+  
+  img {
+    width: 100%;
+  }
+  max-width: 260px;
+  //height: 42px;
+
+  display: inline-block;
+  .logo-primary {
+    fill: #2A4E7E;
+  }
+  .logo-secondary {
+    fill: #42A4DC;
+  }
+}
+
+.navbar.fixed-top {
+  transition-property: background-color, padding;
+  transition: 300ms ease; 
+  &.top-nav-collapse {
+    background-color: #fff;
+    padding-top: calculateRem(24px);
+    padding-bottom: calculateRem(24px);
+    border-bottom: 1px solid $gray-01;
+  }
+}
+
+.navbar {
+  .nav-link {
+    color: $tertiary-color;
+    position: relative;
+    &:before {
+      width: 0;
+      height: 2px;
+      position: absolute;
+      display: block;
+      background-color: $tertiary-color;
+      content: '';
+      bottom: -2px;
+      left: 50%;
+
+      transition: 300ms width ease-in-out;
+      transform: translateX(-50%);
+    }
+    &.active:before,
+    &:hover:before {
+      width: 24px;
+    }
+    
+  }
+  .dropdown-item {
+    @include font-size(14px);
+    font-weight: 700;
+  }
+  .dropdown-item.active, .dropdown-item:active {
+    background-color: $primary-color;
+
+  }
+}
+
+.navbar.navbar-dark {
+  .navbar-brand {
+    -webkit-filter: invert(1) saturate(0) contrast(1) brightness(2);
+    filter: invert(1) saturate(0) contrast(1) brightness(2);
+  }
+  .nav-link {
+    color: #fff;
+    &#navbarDropdownLang {
+      opacity: 0.5;
+    }
+  }
+  &.top-nav-collapse {
+    border-bottom: 1px solid $gray-01;
+    .navbar-brand {
+      -webkit-filter: none;
+      filter: none;
+    }
+    .nav-link {
+      color: $tertiary-color;
+    }
+  }
+}
+
+.nav-link {
+  &#navbarDropdownLang {
+    opacity: 0.5;
+  }
+}
+
+.navbar-absolute {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+  .navbar-toggler .navbar-toggler-icon:before {
+    color: #fff;
+  }
+}
+
+
+
+@media (min-width: 1200px) {
+  .navbar-expand-xl .navbar-nav .nav-link {
+    padding-right: 0.75rem;
+    padding-left: .75rem;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+    .navbar-absolute {
+      .navbar-nav {
+        padding: 15px;
+        background-color: $primary-color;
+        border-radius: 2px; 
+    }
+  }
+
+}
+  

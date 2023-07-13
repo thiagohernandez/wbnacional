@@ -1,0 +1,246 @@
+b, strong {
+    font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-heading;
+    font-weight: 900;
+	letter-spacing: -0.01em;
+}
+
+@mixin heading-display {
+	@include font-size(72px);
+	font-weight:900;
+}
+.heading-display {
+	@include heading-display;
+}
+@mixin heading-h1 {
+    @include font-size(52px);
+	font-weight:900;
+}
+.heading-h1 {
+	@include heading-h1;
+}
+@mixin heading-h2 {
+	@include font-size(42px);
+	font-weight:900;
+}
+.heading-h2 {
+	@include heading-h2;
+}
+@mixin heading-h3 {
+	@include font-size(32px);
+	font-weight:900;
+}
+.heading-h3 {
+	@include heading-h3;
+}
+@mixin heading-h4 {
+	@include font-size(24px);
+	font-weight:900;
+}
+.heading-h4 {
+	@include heading-h4;
+}
+@mixin heading-h5 {
+    @include font-size(18px);
+	font-weight:900;
+}
+.heading-h5 {
+	@include heading-h5;
+}
+@mixin heading-h6 {
+	@include font-size(16px);
+	font-weight:900;
+}
+.heading-h6 {
+	@include heading-h6;
+}
+@mixin general-overlay {
+	@include font-size(12px);
+	font-weight:900;
+}
+.general-overlay  {
+	@include general-overlay;
+}
+@mixin lead {
+    @include font-size(21px);
+	font-weight:300;
+}
+.lead  {
+	@include lead;
+}
+@mixin general-paragraph {
+	@include font-size(16px);
+	font-weight:300;
+}
+.general-paragraph  {
+	@include general-paragraph;
+}
+@mixin general-paragraph-sm {
+    @include font-size(13px);
+	font-weight:400;
+}
+.general-paragraph-sm  {
+	@include general-paragraph-sm;
+}
+@mixin general-paragraph-sm-italic {
+	@include font-size(13px);
+	font-weight:400;
+    font-style: italic;
+}
+.general-paragraph-sm-italic {
+	@include general-paragraph-sm-italic;
+}
+@mixin lead-lg {
+	@include font-size(32px);
+	font-weight:300;
+}
+.lead-lg {
+	@include lead-lg;
+}
+
+
+h1 {
+    color: $primary-color;
+    @include heading-h1;
+}
+
+h2 {
+    color: $secondary-color;
+    @include heading-h2;
+}
+
+h3 {
+    color: $primary-color;
+    @include heading-h3;
+}
+
+h4 {
+    color: $tertiary-color;
+    @include heading-h4;
+}
+
+h5 {
+    color: $tertiary-color;
+    @include heading-h5;
+}
+h6 {
+    color: $tertiary-color;
+    @include heading-h6;
+}
+
+p {
+    line-height: 1.5em;
+    margin-bottom: calculateRem(24px);
+}
+
+.heading-small  {
+	letter-spacing: -0.01em;
+	font-weight: 700;
+	@include font-size(24px);
+}
+
+.text-gray-00 {
+	color: $gray-00;
+}
+.text-gray-01 {
+	color: $gray-01;
+}
+.text-gray-02 {
+	color: $gray-02;
+}
+.text-gray-03 {
+	color: $gray-03;
+}
+.text-gray-04 {
+	color: $gray-04;
+}
+.text-gray-05 {
+	color: $gray-05;
+}
+.text-gray-06 {
+	color: $gray-06;
+}
+.text-gray-07 {
+	color: $gray-07;
+}
+.text-gray-08 {
+	color: $gray-08;
+}
+.text-gray-09 {
+	color: $gray-09;
+}
+.text-gray-10 {
+	color: $gray-10;
+}
+.text-gray-11 {
+	color: $gray-11;
+}
+
+.text-primary {
+	color: $primary-color!important;
+}
+.text-secondary {
+	color: $secondary-color!important;
+}
+.text-tertiary {
+	color: $tertiary-color!important;
+}
+
+.text-brand-blue-primary {
+	color: $brand-blue-primary;	
+}
+.text-brand-blue-secondary {
+	color: $brand-blue-secondary;	
+}
+.text-brand-blue-tertiary {
+	color: $brand-blue-tertiary;	
+}
+.text-brand-blue-00 {
+	color: $brand-blue-00;	
+}
+.text-brand-blue-01 {
+	color: $brand-blue-01;	
+}
+.text-brand-blue-02 {
+	color: $brand-blue-02;	
+}
+.text-brand-blue-03 {
+	color: $brand-blue-03;	
+}
+.text-brand-blue-04 {
+	color: $brand-blue-04;	
+}
+.text-brand-blue-05 {
+	color: $brand-blue-05;	
+}
+.text-brand-blue-06 {
+	color: $brand-blue-06;	
+}
+.text-brand-blue-07 {
+	color: $brand-blue-07;	
+}
+.text-brand-blue-dark {
+	color: $brand-blue-dark;	
+}
+
+.title-with-link a {
+	font-weight: 700;
+	color: $secondary-color;
+	@include font-size(14px);
+}
+
+.sm-link {
+	color: $accent--dark;
+	text-transform: uppercase;
+	@include font-size(11px);
+	font-weight: 900;
+	letter-spacing: 0.35em;
+	transition: 300ms color ease;
+	&:hover {
+		color: $accent--light;
+		text-decoration: none;
+	}
+}

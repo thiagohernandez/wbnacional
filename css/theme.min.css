@@ -2367,7 +2367,7 @@ select.form-control {
   background-image: url("../img/assets/bg-high-sidebar.jpg");
   height: 100%;
 }
-.sidebar-contact s .sidebar--inner {
+.sidebar-contact .sidebar--inner {
   padding: 62px;
 }
 .sidebar-contact.sidebar-overlay {
@@ -2389,11 +2389,6 @@ select.form-control {
   padding: 62px;
 }
 
-@media screen and (min-width: 991px) {
-  .sidebar-contact {
-    padding-top: 180px;
-  }
-}
 .sidebar-widget {
   padding: 0.5rem 0;
 }

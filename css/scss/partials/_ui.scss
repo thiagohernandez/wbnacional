@@ -782,7 +782,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url('../img/assets/bg-high-sidebar.jpg');
-    height: 100%;s
+    height: 100%;
     .sidebar--inner {
         padding: 62px;
     }
@@ -806,11 +806,6 @@
         }
     }
     
-}
-@media screen and (min-width: 991px) {
-    .sidebar-contact {
-        padding-top: 180px;
-    }
 }
 
 .sidebar-widget {

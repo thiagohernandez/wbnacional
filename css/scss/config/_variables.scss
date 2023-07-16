@@ -15,9 +15,11 @@ $font-weight-bold: 700;
 // Color system
 //
 
-$brand-blue-primary: rgba(30,15,72,1);
-$brand-blue-secondary: rgba(0,182,239,1);
-$brand-blue-tertiary: rgba(1,73,157,1);
+$brand-blue-primary: rgba(42,77,125,1);
+//$brand-blue-secondary: rgba(0,182,239,1);
+$brand-blue-secondary: rgba(54,167,232,1);
+$brand-blue-tertiary: rgba(58,157,182,1);
+
 $brand-blue-00: rgba(198,235,253,1);
 $brand-blue-01: rgba(0,182,239,1);
 $brand-blue-02: rgba(0,134,207,1);
@@ -66,6 +68,9 @@ $gray-10: rgba(61,66,74,1);
 $gray-11: rgba(30,33,37,1);
 
 $dark-gray: $gray-11;
+
+$dark-gradient: linear-gradient(135deg, #041021 0%, #25358D 100%);
+
 
 
 @mixin effect-style-dropshadow-input {

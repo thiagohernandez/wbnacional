@@ -35,7 +35,7 @@
     .icon--line {
       height: 2px;
       border-radius: 2px;
-      background-color: $secondary-color;
+      background-color: $primary-color;
       display: inline-block;
       margin: 2px auto;
       width: 70%;
@@ -51,7 +51,7 @@
   }
   &:hover {
     .navbar-toggler-icon:before {
-      color: $secondary-color;
+      color: $primary-color;
     }
     .navbar-toggler-icon .icon--line {
       width: 100%;
@@ -122,14 +122,14 @@
 
 .navbar {
   .nav-link {
-    color: $tertiary-color;
+    color: $primary-color;
     position: relative;
     &:before {
       width: 0;
       height: 2px;
       position: absolute;
       display: block;
-      background-color: $tertiary-color;
+      background-color: $primary-color;
       content: '';
       bottom: -2px;
       left: 50%;
@@ -140,6 +140,12 @@
     &.active:before,
     &:hover:before {
       width: 24px;
+    }
+    &.nav-link--primary {
+      background-color: $secondary-color;
+      color: white;
+      border-radius: 4px;
+      font-weight: 800;
     }
     
   }
@@ -160,8 +166,20 @@
   }
   .nav-link {
     color: #fff;
+    &:hover {
+      color: $secondary-color;
+    }
     &#navbarDropdownLang {
       opacity: 0.5;
+    }
+    &.nav-link--primary {
+      color: $secondary-color;
+      background-color: white;
+      transition: 300ms all ease-in-out;
+      &:hover {
+        background-color: $secondary-color;
+        color: white;
+      }
     }
   }
   &.top-nav-collapse {
@@ -198,6 +216,10 @@
   .navbar-expand-xl .navbar-nav .nav-link {
     padding-right: 0.75rem;
     padding-left: .75rem;
+    &.nav-link--primary {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
   }
 }
 

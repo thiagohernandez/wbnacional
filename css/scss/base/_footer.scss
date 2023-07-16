@@ -1,5 +1,5 @@
 #footer-page {
-	background-color: $brand-blue-dark;
+	background-color: #03091D;
 	.navbar-brand--footer {
 		-webkit-filter: invert(1) saturate(0) contrast(1) brightness(2);
     	filter: invert(1) saturate(0) contrast(1) brightness(2);
@@ -15,7 +15,7 @@
 	padding-top: calculateRem(124px);
 	padding-bottom: calculateRem(124px);
 
-	background-color: rgba(0,0,0,0.15);
+	background-color: #000A2D;
 }
 
 .nav-footer {
@@ -100,4 +100,9 @@
 .social-media.social-media--footer {
 	margin-top: calculateRem(16px);
 }
-
+@media screen and (min-width: 992px) {
+	.social-media--footer__wrapper {
+		display: flex;
+		justify-content: flex-end;
+	}
+}

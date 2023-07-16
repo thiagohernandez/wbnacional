@@ -73,6 +73,16 @@
     }
 }
 
+.btn-white {
+    @extend .btn;
+    color: $secondary-color;
+    background-color: white;
+    &:hover {
+        color: white;
+        background-color: $secondary-color;
+    }
+}
+
 .btn-accent--light {
     @extend .btn;
     color: white;
